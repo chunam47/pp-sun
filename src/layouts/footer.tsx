@@ -64,8 +64,8 @@ export default function Footer() {
               ))}
             </div>
             <div className="flex items-center justify-end gap-4">
-              {dataBottomIcon.map((item) => (
-                <a href={item.onclick} className="glow-on-hover">
+              {dataBottomIcon.map((item, index) => (
+                <a href={item.onclick} className="glow-on-hover" key={index}>
                   <Image alt={item.title} src={item.src} />
                 </a>
               ))}

@@ -22,7 +22,7 @@ const HomeContainer = () => {
           <span className="text-[16px] leading-5 font-[400] text-white w-[460px] text-center content-home w-[80%]">
             $PPSUN is an AI-driven meme project that aims to promote
             truth-seeking and help the community gain free tickets to
-            Justin&apos;s comedy show.
+            Justin&apos;cus comedy show.
           </span>
         </div>
       </BlockContent>
