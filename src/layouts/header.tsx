@@ -174,9 +174,9 @@ export default function Header() {
                     <button className="text-white p-4 font-[400] bg-transparent border-2 border-[#ECFF76] rounded-xl btn-lauch ">
                       Buy Now
                     </button>
-                    <button className="text-white p-4 font-[400] bg-transparent border-2 border-[#ECFF76] rounded-xl btn-lauch ">
-                      Connect Wallet
-                    </button>
+                    <div className="glow-on-hover p-4 text-white font-medium bg-transparent border-2 border-[#ECFF76] rounded-xl font-montserrat btn-lauch button-connect">
+                      <ConnectButton />
+                    </div>
                   </div>
                 </div>
               </Menu>

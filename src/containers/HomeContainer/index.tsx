@@ -21,8 +21,8 @@ const HomeContainer = () => {
           <h2 className="title-app mb-10">First Ever MeMe about Justin Sun</h2>
           <span className="text-[16px] leading-5 font-[400] text-white w-[460px] text-center content-home w-[80%]">
             $PPSUN is an AI-driven meme project that aims to promote
-            truth-seeking and help the community gain free tickets to Justin's
-            comedy show.
+            truth-seeking and help the community gain free tickets to
+            Justin&apos;s comedy show.
           </span>
         </div>
       </BlockContent>

@@ -20,8 +20,9 @@ const GetPepe = () => {
             </h2>
             <span className="text-[#73A095] font-[400] text-[13px] leading-[26px] w-[75%] text-center mb-6 content-get-pepe">
               A total of 200,000,000,000,000 $PPSUN tokens are now available to
-              be claimed by "audience" who are randomly selected through our
-              airdrop campaign. $PPSUN tokens that have not been claimed within
+              be claimed by &quot;audience&quot; who are randomly selected
+              through our airdrop campaign. $PPSUN tokens that have not been
+              claimed within
             </span>
             <div className="flex bg-[#26423A] items-center rounded-xl px-5 py-2">
               <Image alt="" src={iconFire} />

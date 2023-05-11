@@ -53,8 +53,9 @@ export default function Footer() {
 
           <div className="flex flex-col justify-center gap-4 wrap-footer-right">
             <div className="flex items-center justify-center gap-6 footer-right">
-              {data.map((item) => (
+              {data.map((item, index) => (
                 <a
+                  key={index}
                   className=" cursor-pointer text-[#ECFF76] duration-300 glow-on-hover"
                   href={item.onclick}
                 >

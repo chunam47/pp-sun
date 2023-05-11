@@ -48,7 +48,7 @@ const WelcomeToPepe = () => {
                         <span>
                           is an AI-driven meme project that aims to promote
                           truth-seeking and help the community gain free tickets
-                          to Justin's comedy show.
+                          to Justin&apos;s comedy show.
                         </span>
                         <br />
                         <br />
