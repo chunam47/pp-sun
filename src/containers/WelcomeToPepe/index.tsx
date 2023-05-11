@@ -74,7 +74,7 @@ const WelcomeToPepe = () => {
                         <span className="text-[#ACF10E]">$PPSUN</span>{" "}
                         <span>
                           is a token created by the community, for the
-                          community, and for Justin's comedy show.
+                          community, and for Justin&apos;s comedy show.
                         </span>
                       </div>
                     </div>
@@ -120,7 +120,7 @@ const WelcomeToPepe = () => {
                       <span className="text-[#ACF10E]">$PPSUN</span>{" "}
                       <span>
                         is a token created by the community, for the community,
-                        and for Justin's comedy show.
+                        and for Justin&apos;s comedy show.
                       </span>
                     </div>
                   </div>
