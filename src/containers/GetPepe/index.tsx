@@ -7,13 +7,11 @@ import img from "@assets/images/sun.svg";
 const GetPepe = () => {
   return (
     <React.Fragment>
-      <BlockContent className="relative ">
-        <div className="mt-[282px] mb-[363px] relative get-pepe" id="aridrop">
-          <Image
-            alt=""
-            src={img}
-            className="absolute top-[-103px] left-0 z-[5] opacity-[0.8] img-sun-responsive"
-          />
+      <BlockContent className="relative" id="aridrop">
+        <div className="mt-[282px] mb-[363px] relative get-pepe">
+          <div className="absolute top-[-103px] left-0 z-[5] opacity-[0.8] img-sun-responsive">
+            <Image alt="" src={img} />
+          </div>
           <div className="max-w-[620px] w-full flex flex-col justify-center items-center mt-[103px] p-8 mx-auto bg-[#0E2D25] rounded-[20px] border-[6px] border-[#ACF10E]">
             <h2 className="text-white font-[400] text-[24px] leading-[46px] mb-2">
               You get <span className="text-[#ACF10E]">$PPSUN now</span>

@@ -15,11 +15,9 @@ const WelcomeToPepe = () => {
           id="about-us"
           className="flex flex-col justify-center items-center relative welcome-to-pepe"
         >
-          <Image
-            alt=""
-            src={img}
-            className="absolute top-[-84px] right-0 z-[-1] opacity-[0.8] img-sun-responsive"
-          />
+          <div className="absolute top-[-84px] right-0 z-[-1] opacity-[0.8] img-sun-responsive">
+            <Image alt="" src={img} />
+          </div>
           <div className="flex flex-col justify-center items-center">
             <h2 className="title-app mb-10">Welcome to $PPSUN</h2>
             <span className="text-[24px] leading-7 font-[400] text-white text-center w-[80%]">
