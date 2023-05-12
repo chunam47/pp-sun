@@ -27,17 +27,17 @@ export default function Footer() {
   const dataBottomIcon = [
     {
       title: "Telegram",
-      onclick: "#telegram",
+      onclick: "https://t.me/pepesunarb",
       src: iconTele,
     },
     {
       title: "Discord",
-      onclick: "#Discord",
+      onclick: "https://discord.gg/yZaAnnjH4g",
       src: iconDiscord,
     },
     {
       title: "Tweeter",
-      onclick: "#tweeter",
+      onclick: "https://twitter.com/pepesunarb",
       src: iconSkype,
     },
   ];

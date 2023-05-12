@@ -1,10 +1,12 @@
-import { MenuUnfoldOutlined } from "@ant-design/icons";
+import { MenuOutlined } from "@ant-design/icons";
 import { Drawer, Menu } from "antd";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import logo from "@assets/images/logo.svg";
 import iconSkype from "@assets/images/icon-skype.svg";
 import iconTele from "@assets/images/icon-tele.svg";
+import iconMenu from "@assets/images/icons-menu.svg";
+
 import iconDiscord from "@assets/images/icon-discord.svg";
 
 import BlockContent from "../components/BlockContent";
@@ -39,7 +41,7 @@ export default function Header() {
       onclick: "#earn",
       className: "coming-soon",
       onClick: () => setAlert(true),
-      contentAlert: "Coming Soon !!!",
+      contentAlert: "Coming Soon",
     },
   ];
   const [active, setActive] = useState<any>("");
@@ -100,7 +102,7 @@ export default function Header() {
                     key={key}
                   >
                     {alert && item?.contentAlert && (
-                      <span className="absolute top-[50%] left-0 right-0 translate-y-[-50%] rounded-full bg-[#f2dede] text-[6px] text-[#a94442] px-[4px]">
+                      <span className="absolute top-[50%] left-0 right-0 translate-y-[-50%] rounded-full bg-[#f2dede] text-[8px] text-[#a94442] px-[4px]">
                         {item?.contentAlert}
                       </span>
                     )}
@@ -123,7 +125,7 @@ export default function Header() {
               </Menu>
             </div>
             <div className="flex gap-20 items-center">
-              <div className="flex gap-4 items-center link-app-header">
+              {/* <div className="flex gap-4 items-center link-app-header">
                 <a href="#" className="glow-on-hover cursor-pointer">
                   <Image alt="" src={iconSkype} />
                 </a>
@@ -133,7 +135,7 @@ export default function Header() {
                 <a href="#" className="glow-on-hover cursor-pointer">
                   <Image alt="" src={iconTele} />
                 </a>
-              </div>
+              </div> */}
               <div className="flex gap-4 items-center">
                 <button className="glow-on-hover py-2 px-3 text-white font-medium bg-transparent border-2 border-[#ECFF76] rounded-xl font-montserrat btn-lauch ">
                   Buy Now
@@ -148,8 +150,8 @@ export default function Header() {
               <ConnectButton />
             </div>
 
-            <div className="menuButton hidden" onClick={showDrawer}>
-              <MenuUnfoldOutlined />
+            <div className="menuButton hidden w-[20px]" onClick={showDrawer}>
+              <Image src={iconMenu} alt="" className="img" />
             </div>
 
             <Drawer

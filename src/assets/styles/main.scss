@@ -240,6 +240,13 @@ button {
       margin-right: 10px;
       color: #070707;
       height: 45px;
+
+      .img {
+        width: 50% !important;
+      }
+    }
+    .button-connect-responsive {
+      display: block;
     }
 
     .menu {
@@ -280,9 +287,6 @@ button {
 }
 
 @media screen and (max-width: 1024px) {
-  .button-connect-responsive {
-    display: block;
-  }
   .title-app {
     font-size: 50px;
     line-height: 40px;
