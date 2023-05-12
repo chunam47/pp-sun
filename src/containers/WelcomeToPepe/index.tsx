@@ -10,12 +10,9 @@ const WelcomeToPepe = () => {
   const matches = useMediaQuery("(max-width: 551px)");
   return (
     <React.Fragment>
-      <BlockContent className="relative">
-        <div
-          id="about-us"
-          className="flex flex-col justify-center items-center relative welcome-to-pepe"
-        >
-          <div className="absolute top-[-84px] right-0 z-[-1] opacity-[0.8] img-sun-responsive">
+      <BlockContent className="relative pt-[1px]" id="about-us">
+        <div className="flex flex-col justify-center items-center relative welcome-to-pepe mt-[300px]">
+          <div className="absolute top-[-250px] right-0 z-[-1] opacity-[0.8] img-sun-responsive">
             <Image alt="" src={img} />
           </div>
           <div className="flex flex-col justify-center items-center">
@@ -40,7 +37,7 @@ const WelcomeToPepe = () => {
               <div className="">
                 <div className="flex gap-14 mt-14 items-center justify-center flex-wrap">
                   <SwiperSlide>
-                    <div className="min-h-[198px] h-full flex items-center text-[12px] leading-4 p-6 border-[3px] rounded-[20px] text-white border-[#ECFF76] w-[278px]">
+                    <div className="min-h-[400px] h-full flex items-center text-[16px] leading-8 p-6 border-[3px] rounded-[20px] text-white border-[#ECFF76] w-[278px]">
                       <div>
                         <span className="text-[#ACF10E]">$PPSUN</span>{" "}
                         <span>
@@ -55,7 +52,7 @@ const WelcomeToPepe = () => {
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <div className="min-h-[198px] h-full flex items-center text-[12px] leading-4 p-6 border-[3px] rounded-[20px] text-white border-[#ECFF76] w-[278px]">
+                    <div className="min-h-[400px] h-full flex items-center text-[16px] leading-8 p-6 border-[3px] rounded-[20px] text-white border-[#ECFF76] w-[278px]">
                       <div>
                         <span>Through the</span>{" "}
                         <span className="text-[#ACF10E]"> $PPSUN</span>{" "}
@@ -67,7 +64,7 @@ const WelcomeToPepe = () => {
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <div className="min-h-[198px] h-full flex items-center text-[12px] leading-4 p-6 border-[3px] rounded-[20px] text-white border-[#ECFF76] w-[278px]">
+                    <div className="min-h-[400px] h-full flex items-center text-[16px] leading-8 p-6 border-[3px] rounded-[20px] text-white border-[#ECFF76] w-[278px]">
                       <div>
                         <span className="text-[#ACF10E]">$PPSUN</span>{" "}
                         <span>
@@ -84,7 +81,7 @@ const WelcomeToPepe = () => {
             <>
               <div className="flex gap-14 mt-14 items-center justify-center flex-wrap">
                 <div>
-                  <div className="min-h-[198px] h-full flex items-center text-[12px] leading-4 p-6 border-[3px] rounded-[20px] text-white border-[#ECFF76] w-[278px]">
+                  <div className="min-h-[400px] h-full flex items-center text-[16px] leading-8 p-6 border-[3px] rounded-[20px] text-white border-[#ECFF76] w-[278px]">
                     <div>
                       <span className="text-[#ACF10E]">$PPSUN</span>{" "}
                       <span>
@@ -100,7 +97,7 @@ const WelcomeToPepe = () => {
                 </div>
                 {/* <hr className="line-hr" /> */}
                 <div>
-                  <div className="min-h-[198px] h-full flex items-center text-[12px] leading-4 p-6 border-[3px] rounded-[20px] text-white border-[#ECFF76] w-[278px]">
+                  <div className="min-h-[400px] h-full flex items-center text-[16px] leading-8 p-6 border-[3px] rounded-[20px] text-white border-[#ECFF76] w-[278px]">
                     <div>
                       <span>Through the</span>{" "}
                       <span className="text-[#ACF10E]"> $PPSUN</span>{" "}
@@ -113,7 +110,7 @@ const WelcomeToPepe = () => {
                 </div>
                 {/* <hr className="line-hr" /> */}
                 <div>
-                  <div className="min-h-[198px] h-full flex items-center text-[12px] leading-4 p-6 border-[3px] rounded-[20px] text-white border-[#ECFF76] w-[278px]">
+                  <div className="min-h-[400px] h-full flex items-center text-[16px] leading-8 p-6 border-[3px] rounded-[20px] text-white border-[#ECFF76] w-[278px]">
                     <div>
                       <span className="text-[#ACF10E]">$PPSUN</span>{" "}
                       <span>

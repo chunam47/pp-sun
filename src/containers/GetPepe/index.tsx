@@ -7,16 +7,16 @@ import img from "@assets/images/sun.svg";
 const GetPepe = () => {
   return (
     <React.Fragment>
-      <BlockContent className="relative" id="aridrop">
-        <div className="mt-[282px] mb-[363px] relative get-pepe">
+      <BlockContent className="relative pt-[1px]" id="aridrop">
+        <div className="mt-[200px] relative get-pepe">
           <div className="absolute top-[-103px] left-0 z-[5] opacity-[0.8] img-sun-responsive">
             <Image alt="" src={img} />
           </div>
           <div className="max-w-[620px] w-full flex flex-col justify-center items-center mt-[103px] p-8 mx-auto bg-[#0E2D25] rounded-[20px] border-[6px] border-[#ACF10E]">
-            <h2 className="text-white font-[400] text-[24px] leading-[46px] mb-2">
+            <h2 className="text-white font-[400] text-[32px] leading-[46px] mb-2 text-center">
               You get <span className="text-[#ACF10E]">$PPSUN now</span>
             </h2>
-            <span className="text-[#73A095] font-[400] text-[13px] leading-[26px] w-[75%] text-center mb-6 content-get-pepe">
+            <span className="text-[#73A095] font-[400] text-[18px] leading-[32px] w-[90%] text-center mb-6 content-get-pepe">
               A total of 200,000,000,000,000 $PPSUN tokens are now available to
               be claimed by &quot;audience&quot; who are randomly selected
               through our airdrop campaign. $PPSUN tokens that have not been
@@ -46,7 +46,7 @@ const GetPepe = () => {
             <div className="flex gap-8 justify-evenly w-[90%] mt-14">
               <button className="bg-[#73A095] rounded-xl py-[10px] px-4 text-white text-[16px] leading-5 glow-on-hover">
                 <span className="flex justify-center items-center text-center">
-                  Wallet not connect
+                  Wallet not connected
                 </span>
               </button>
               <button className="bg-[#59A895] rounded-xl py-[10px] px-4 text-white text-[16px] leading-5 border-[3px] border-[#ACF10E] glow-on-hover">

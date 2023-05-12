@@ -92,7 +92,6 @@ button {
   position: fixed;
   .menu {
     border-inline-end: unset !important;
-    gap: 12px;
     &__item {
       font-family: "Chango";
       font-style: normal;
@@ -150,10 +149,10 @@ button {
       transform: translate(70vw, 0);
     }
     50% {
-      transform: translate(70vw, 130vh);
+      transform: translate(70vw, 100vh);
     }
     70% {
-      transform: translate(0, 130vh);
+      transform: translate(0, 100vh);
     }
     100% {
       transform: translate(0, 0);
@@ -281,6 +280,12 @@ button {
       font-size: 50px;
     }
   }
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 20px;
+  }
 }
 
 @media screen and (max-width: 950px) {
@@ -309,10 +314,6 @@ button {
       font-size: 50px;
     }
   }
-  .footer-left {
-    display: flex;
-    flex-direction: column;
-  }
 }
 @media screen and (max-width: 768px) {
   .wrap-footer-right {
@@ -326,20 +327,23 @@ button {
 @media screen and (max-width: 550px) {
   .home-container {
     h1 {
-      font-size: 30px;
-      line-height: 36px;
+      font-size: 40px;
+      line-height: 48px;
     }
   }
   .title-app {
-    font-size: 30px;
+    font-size: 32px;
     line-height: 36px;
   }
   .content-home {
-    font-size: 12px;
+    font-size: 16px;
+    width: 100%;
   }
 
   .content-get-pepe {
     width: 100%;
+    font-size: 14px;
+    line-height: 24px;
   }
 
   .amination-sun {
@@ -362,7 +366,7 @@ button {
   }
   .img-sun-responsive {
     width: 100%;
-    top: -200px;
+    top: -160px;
     width: 70%;
   }
 
@@ -373,8 +377,14 @@ button {
     }
   }
 
+  .welcome-to-pepe {
+    margin-top: 200px;
+  }
   .get-pepe {
-    margin: 141px 0 181px 0;
+    margin: 141px 0 0 0;
+  }
+  #pepetomomics {
+    padding-top: 200px;
   }
 }
 @media screen and (max-width: 425px) {

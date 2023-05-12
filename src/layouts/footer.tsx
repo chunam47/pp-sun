@@ -1,10 +1,12 @@
 import Image from "next/image";
 import logo from "@assets/images/logo.svg";
-import iconTweet from "@assets/images/button-tweet.png";
-import iconTele from "@assets/images/button-tele.png";
+import iconSkype from "@assets/images/icon-skype.svg";
+import iconTele from "@assets/images/icon-tele.svg";
 import iconA from "@assets/images/button-a.png";
 import React from "react";
 import BlockContent from "../components/BlockContent";
+import iconDiscord from "@assets/images/icon-discord.svg";
+
 // import BlockContent from "../components/BlockContent";
 export default function Footer() {
   const data = [
@@ -29,16 +31,21 @@ export default function Footer() {
       src: iconTele,
     },
     {
+      title: "Discord",
+      onclick: "#Discord",
+      src: iconDiscord,
+    },
+    {
       title: "Tweeter",
       onclick: "#tweeter",
-      src: iconTweet,
+      src: iconSkype,
     },
   ];
   return (
     <div className="footer bg-[#0e2d25] ">
       <BlockContent>
         <div className="content-footer w-full flex flex-row items-center justify-between py-8 ">
-          <div className="flex flex-row gap-10 footer-left">
+          <div className="flex flex-row gap-10 footer-left items-baseline">
             <Image
               alt="logo"
               src={logo}

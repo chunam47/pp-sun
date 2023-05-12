@@ -5,6 +5,8 @@ import React, { useEffect, useState } from "react";
 import logo from "@assets/images/logo.svg";
 import iconSkype from "@assets/images/icon-skype.svg";
 import iconTele from "@assets/images/icon-tele.svg";
+import iconDiscord from "@assets/images/icon-discord.svg";
+
 import BlockContent from "../components/BlockContent";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 
@@ -25,7 +27,7 @@ export default function Header() {
       onclick: "#about-us",
     },
     {
-      title: "$PPSunomic",
+      title: "Pepetomomics",
       onclick: "#pepetomomics",
     },
     {
@@ -75,7 +77,7 @@ export default function Header() {
       <div className={`header-app w-full fixed z-10`}>
         <BlockContent>
           <div className="flex justify-between items-center py-[15px]">
-            <div className="flex gap-8">
+            <div className="flex gap-4">
               <Image
                 alt="logo"
                 src={logo}
@@ -116,14 +118,17 @@ export default function Header() {
             </div>
             <div className="flex gap-20 items-center">
               <div className="flex gap-4 items-center link-app-header">
-                <div className="glow-on-hover cursor-pointer">
+                <a href="#" className="glow-on-hover cursor-pointer">
                   <Image alt="" src={iconSkype} />
-                </div>
-                <div className="glow-on-hover">
+                </a>
+                <a href="#" className="glow-on-hover cursor-pointer">
+                  <Image alt="" src={iconDiscord} />
+                </a>
+                <a href="#" className="glow-on-hover cursor-pointer">
                   <Image alt="" src={iconTele} />
-                </div>
+                </a>
               </div>
-              <div className="flex gap-8 items-center">
+              <div className="flex gap-4 items-center">
                 <button className="glow-on-hover py-2 px-3 text-white font-medium bg-transparent border-2 border-[#ECFF76] rounded-xl font-montserrat btn-lauch ">
                   Buy Now
                 </button>
@@ -163,12 +168,15 @@ export default function Header() {
                 ))}
                 <div className="py-2 px-3 w-fit">
                   <div className="flex gap-4 items-center link-app-header mb-5">
-                    <div className="glow-on-hover cursor-pointer">
+                    <a href="#" className="cursor-pointer">
                       <Image alt="" src={iconSkype} />
-                    </div>
-                    <div className="glow-on-hover">
+                    </a>
+                    <a href="#" className="cursor-pointer">
+                      <Image alt="" src={iconDiscord} />
+                    </a>
+                    <a href="#" className="cursor-pointer">
                       <Image alt="" src={iconTele} />
-                    </div>
+                    </a>
                   </div>
                   <div className="flex flex-col gap-8">
                     <button className="text-white p-4 font-[400] bg-transparent border-2 border-[#ECFF76] rounded-xl btn-lauch ">

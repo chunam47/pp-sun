@@ -6,7 +6,7 @@ import Image from "next/image";
 const HomeContainer = () => {
   return (
     <React.Fragment>
-      <BlockContent className="pt-[286px] relative ">
+      <BlockContent className="pt-[200px] relative ">
         <div className="flex flex-col justify-center items-center relative home-container ">
           <div className="absolute top-[-137px] right-0 z-[-1] opacity-[0.8] img-sun-responsive">
             <Image alt="" src={img} />
@@ -21,7 +21,7 @@ const HomeContainer = () => {
           <span className="text-[24px] leading-8 font-[400] text-white text-center content-home w-[50%]">
             $PPSUN is an AI-driven meme project that aims to promote
             truth-seeking and help the community gain free tickets to
-            Justin&apos;cus comedy show.
+            Justin&apos;s comedy show.
           </span>
         </div>
       </BlockContent>

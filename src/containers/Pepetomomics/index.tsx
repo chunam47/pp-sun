@@ -9,8 +9,8 @@ import { styled } from "styled-components";
 const Pepetomomics = () => {
   return (
     <React.Fragment>
-      <BlockContent id="pepetomomics">
-        <div className="flex flex-col justify-center items-center mt-[276px] mb-[214px] relative">
+      <BlockContent id="pepetomomics" className="relative pt-[60px]">
+        <div className="flex flex-col justify-center items-center mt-[200px] mb-[214px] relative">
           <div className="amination-sun">
             <Image alt="" src={img} className="img opacity-[0.8]" />
           </div>
