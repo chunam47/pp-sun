@@ -27,7 +27,7 @@ export default function Header() {
       onclick: "#about-us",
     },
     {
-      title: "Pepetomomics",
+      title: "$PPSunomics",
       onclick: "#pepetomomics",
     },
     {

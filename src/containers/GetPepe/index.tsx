@@ -51,7 +51,7 @@ const GetPepe = () => {
               </button>
               <button className="bg-[#59A895] rounded-xl py-[10px] px-4 text-white text-[16px] leading-5 border-[3px] border-[#ACF10E] glow-on-hover">
                 <span className="flex justify-center items-center text-center">
-                  Invite Friends
+                  Invite friends
                 </span>
               </button>
             </div>

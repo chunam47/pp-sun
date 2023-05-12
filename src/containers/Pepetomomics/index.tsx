@@ -17,7 +17,7 @@ const Pepetomomics = () => {
           <div className="flex flex-col justify-center">
             <h2 className="title-app mb-6 text-center">$PPSunomics</h2>
             <span className="text-white text-[30px] leading-9 font-[400] mb-[100px] text-center desc-pepetomomics">
-              Token Supply: 500,000,000,000,000
+              Token Supply: 420,000,000,000,000
             </span>
 
             <Image alt="" src={imgContent} />
