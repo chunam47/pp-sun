@@ -124,33 +124,6 @@ button {
   background-image: url("../images/line.svg");
 }
 
-.range-get-pepe {
-  .progress {
-    width: 100%;
-    background: linear-gradient(
-      to right,
-      #82cfd0 0%,
-      #82cfd0 0%,
-      #26423a 0%,
-      #26423a 100%
-    );
-    border-radius: 8px;
-    height: 7px;
-    outline: none;
-    transition: background 450ms ease-in;
-    -webkit-appearance: none;
-  }
-
-  .progress::-webkit-slider-thumb {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    -webkit-appearance: none;
-    cursor: ew-resize;
-    background: #acf10e;
-  }
-}
-
 .amination-sun {
   position: absolute;
   top: -252px;

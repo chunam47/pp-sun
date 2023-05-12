@@ -45,7 +45,7 @@ export default function Footer() {
     <div className="footer bg-[#0e2d25] ">
       <BlockContent>
         <div className="content-footer w-full flex flex-row items-center justify-between py-8 ">
-          <div className="flex flex-row gap-10 footer-left items-baseline">
+          <div className="flex flex-row gap-10 footer-left ">
             <Image
               alt="logo"
               src={logo}

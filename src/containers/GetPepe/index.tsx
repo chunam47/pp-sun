@@ -3,8 +3,10 @@ import BlockContent from "../../components/BlockContent";
 import Image from "next/image";
 import iconFire from "@assets/images/icon-fire.svg";
 import img from "@assets/images/sun.svg";
+import { styled } from "styled-components";
 
 const GetPepe = () => {
+  const [value, setValue] = React.useState(0);
   return (
     <React.Fragment>
       <BlockContent className="relative pt-[1px]" id="aridrop">
@@ -33,16 +35,16 @@ const GetPepe = () => {
                 <span>Claimed</span>
                 <span>84,000,000,000,000</span>
               </div>
-              <div className="w-full range-get-pepe">
+              <WrapperInput className="w-full" value={value}>
                 <input
                   type="range"
-                  value="0"
+                  value={value}
                   min="0"
                   max="100"
                   step="1"
                   className="progress w-full"
                 />
-              </div>
+              </WrapperInput>
             </div>
             <div className="flex gap-8 justify-evenly w-[90%] mt-14">
               <button className="bg-[#73A095] rounded-xl py-[10px] px-4 text-white text-[16px] leading-5 glow-on-hover">
@@ -59,3 +61,30 @@ const GetPepe = () => {
 };
 
 export default GetPepe;
+
+const WrapperInput = styled.div<{ value: number }>`
+  .progress {
+    width: 100%;
+    background: linear-gradient(
+      to right,
+      #82cfd0 ${(props) => props.value}%,
+      #82cfd0 ${(props) => props.value}%,
+      #26423a 0%,
+      #26423a 100%
+    );
+    border-radius: 8px;
+    height: 7px;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+  }
+
+  .progress::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    cursor: ew-resize;
+    background: #acf10e;
+  }
+`;
