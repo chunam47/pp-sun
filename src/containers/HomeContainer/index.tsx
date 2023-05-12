@@ -11,7 +11,6 @@ const HomeContainer = () => {
           <div className="absolute top-[-137px] right-0 z-[-1] opacity-[0.8] img-sun-responsive">
             <Image alt="" src={img} />
           </div>
-
           <h1 className="text-[60px] font-[400] leading-[73px] text-white text-center mb-8 ">
             King Of Fud
             <br />

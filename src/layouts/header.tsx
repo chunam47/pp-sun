@@ -72,21 +72,27 @@ export default function Header() {
     setActive(sessionStorage.getItem("menu-active"));
   }, [handleClickMenu]);
 
+  const _renderConnect = () => {
+    return <ConnectButton />;
+  };
+
   return (
     <React.Fragment>
       <div className={`header-app w-full fixed z-10`}>
         <BlockContent>
           <div className="flex justify-between items-center py-[15px]">
             <div className="flex gap-4">
-              <Image
-                alt="logo"
-                src={logo}
-                onClick={() => {
-                  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-                  sessionStorage.setItem("menu-active", "");
-                }}
-                className="cursor-pointer"
-              />
+              <div className="logo">
+                <Image
+                  alt="logo"
+                  src={logo}
+                  onClick={() => {
+                    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                    sessionStorage.setItem("menu-active", "");
+                  }}
+                  className="cursor-pointer "
+                />
+              </div>
               <Menu className="menu flex justify-between bg-transparent">
                 {dataMenu.map((item, key) => (
                   <Menu.Item
@@ -137,9 +143,15 @@ export default function Header() {
                 </div>
               </div>
             </div>
+
+            <div className="text-white text-[14px] absolute left-[40%] font-[400] bg-transparent border-2 border-[#ECFF76] rounded-xl button-connect-responsive">
+              <ConnectButton />
+            </div>
+
             <div className="menuButton hidden" onClick={showDrawer}>
               <MenuUnfoldOutlined />
             </div>
+
             <Drawer
               placement="right"
               closable={true}
@@ -182,9 +194,6 @@ export default function Header() {
                     <button className="text-white p-4 font-[400] bg-transparent border-2 border-[#ECFF76] rounded-xl btn-lauch ">
                       Buy Now
                     </button>
-                    <div className="glow-on-hover p-4 text-white font-medium bg-transparent border-2 border-[#ECFF76] rounded-xl font-montserrat btn-lauch button-connect">
-                      <ConnectButton />
-                    </div>
                   </div>
                 </div>
               </Menu>

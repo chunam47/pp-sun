@@ -21,6 +21,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
+  overflow-x: hidden;
 }
 
 button {
@@ -124,13 +125,29 @@ button {
 }
 
 .range-get-pepe {
-  input[type="range"]::-webkit-slider-runnable-track {
-    background: #26423a;
-    height: 6px;
-    border-radius: 50px;
+  .progress {
+    width: 100%;
+    background: linear-gradient(
+      to right,
+      #82cfd0 0%,
+      #82cfd0 0%,
+      #26423a 0%,
+      #26423a 100%
+    );
+    border-radius: 8px;
+    height: 7px;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
   }
-  input[type="range"]::-webkit-slider-thumb {
-    display: none;
+
+  .progress::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    cursor: ew-resize;
+    background: #acf10e;
   }
 }
 
@@ -170,6 +187,15 @@ button {
 .button-connect {
   button {
     background: transparent !important;
+    color: white !important;
+  }
+}
+
+.button-connect-responsive {
+  display: none;
+  button {
+    background: transparent !important;
+    color: white !important;
   }
 }
 // .swiper-slide {
@@ -251,6 +277,7 @@ button {
     }
   }
 }
+
 @media screen and (max-width: 1280px) {
   .amination-sun {
     position: absolute;
@@ -280,6 +307,9 @@ button {
 }
 
 @media screen and (max-width: 1024px) {
+  .button-connect-responsive {
+    display: block;
+  }
   .title-app {
     font-size: 50px;
     line-height: 40px;
@@ -350,8 +380,14 @@ button {
       align-items: baseline;
     }
   }
+  .logo {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 550px) {
+  .logo {
+    width: 40%;
+  }
   .home-container {
     h1 {
       font-size: 40px;
@@ -428,5 +464,8 @@ button {
       font-size: 10px;
       line-height: 12px;
     }
+  }
+  .button-connect-responsive {
+    font-size: 10px;
   }
 }
