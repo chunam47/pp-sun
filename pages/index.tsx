@@ -8,7 +8,7 @@ import Pepetomomics from "../src/containers/Pepetomomics";
 export default function Home() {
   return (
     <>
-      <Layout title="PPsun" description="" showFooter>
+      <Layout title="PPSun" description="" showFooter>
         <HomeContainer />
         <GetPepe />
         <WelcomeToPepe />
