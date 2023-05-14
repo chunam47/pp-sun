@@ -7,7 +7,7 @@ import { styled } from "styled-components";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 const GetPepe = () => {
-  const [value, setValue] = React.useState(30);
+  const [value, setValue] = React.useState(0);
   return (
     <React.Fragment>
       <BlockContent className="relative pt-[1px]" id="aridrop">
