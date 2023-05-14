@@ -139,10 +139,10 @@ button {
       transform: translate(70vw, 0);
     }
     50% {
-      transform: translate(70vw, 140vh);
+      transform: translate(70vw, 160vh);
     }
     70% {
-      transform: translate(0, 140vh);
+      transform: translate(0, 160vh);
     }
     100% {
       transform: translate(0, 0);
@@ -161,6 +161,11 @@ button {
   button {
     background: transparent !important;
     color: white !important;
+    text-align: center !important;
+  }
+  div {
+    border: unset !important;
+    background: unset !important;
   }
 }
 
@@ -169,6 +174,10 @@ button {
   button {
     background: transparent !important;
     color: white !important;
+  }
+  div {
+    border: unset !important;
+    background: unset !important;
   }
 }
 // .swiper-slide {
@@ -210,11 +219,9 @@ button {
 }
 @media screen and (max-width: 1355px) {
   .ant-drawer-wrapper-body {
-    background: radial-gradient(
-      213.19% 213.19% at 50% 50%,
-      #0ca280 0%,
-      rgba(247, 228, 62, 0.71) 100%
-    );
+    background-image: url("../../assets/images/bg-menu-responsive.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
     box-shadow: 0px 4px 55px rgba(0, 0, 0, 0.13);
   }
   .ant-menu {
@@ -322,7 +329,7 @@ button {
   }
   .amination-sun {
     position: absolute;
-    top: -126px;
+    top: -140px;
     left: -17px;
     z-index: 1;
     animation: unset;
@@ -388,7 +395,7 @@ button {
 
   .amination-sun {
     z-index: -1;
-    top: -252px;
+    // top: -252px;
     width: 70%;
   }
   .desc-pepetomomics {
@@ -443,6 +450,6 @@ button {
     }
   }
   .button-connect-responsive {
-    font-size: 10px;
+    font-size: 8px;
   }
 }

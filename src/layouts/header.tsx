@@ -34,7 +34,7 @@ export default function Header() {
     },
     {
       title: "Whitepaper",
-      onclick: "#whitepaper",
+      onclick: "https://whitepaper.ppsun.xyz/",
     },
     {
       title: "Earn",
@@ -85,9 +85,9 @@ export default function Header() {
           <div className="flex justify-between items-center py-[15px]">
             <div className="flex gap-4">
               <div className="logo">
-                <Image
+                <img
                   alt="logo"
-                  src={logo}
+                  src={logo.src}
                   onClick={() => {
                     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
                     sessionStorage.setItem("menu-active", "");
@@ -127,13 +127,13 @@ export default function Header() {
             <div className="flex gap-20 items-center">
               {/* <div className="flex gap-4 items-center link-app-header">
                 <a href="#" className="glow-on-hover cursor-pointer">
-                  <Image alt="" src={iconSkype} />
+                  <img alt="" src={iconSkype.src} />
                 </a>
                 <a href="#" className="glow-on-hover cursor-pointer">
-                  <Image alt="" src={iconDiscord} />
+                  <img alt="" src={iconDiscord.src} />
                 </a>
                 <a href="#" className="glow-on-hover cursor-pointer">
-                  <Image alt="" src={iconTele} />
+                  <img alt="" src={iconTele.src} />
                 </a>
               </div> */}
               <div className="flex gap-4 items-center">
@@ -150,8 +150,11 @@ export default function Header() {
               <ConnectButton />
             </div>
 
-            <div className="menuButton hidden w-[20px]" onClick={showDrawer}>
-              <Image src={iconMenu} alt="" className="img" />
+            <div
+              className="menuButton hidden w-[30px] cursor-pointer"
+              onClick={showDrawer}
+            >
+              <img src={iconMenu.src} alt="" className="img" />
             </div>
 
             <Drawer
@@ -183,13 +186,13 @@ export default function Header() {
                 <div className="py-2 px-3 w-fit">
                   <div className="flex gap-4 items-center link-app-header mb-5">
                     <a href="#" className="cursor-pointer">
-                      <Image alt="" src={iconSkype} />
+                      <img alt="" src={iconSkype.src} />
                     </a>
                     <a href="#" className="cursor-pointer">
-                      <Image alt="" src={iconDiscord} />
+                      <img alt="" src={iconDiscord.src} />
                     </a>
                     <a href="#" className="cursor-pointer">
-                      <Image alt="" src={iconTele} />
+                      <img alt="" src={iconTele.src} />
                     </a>
                   </div>
                   <div className="flex flex-col gap-8">

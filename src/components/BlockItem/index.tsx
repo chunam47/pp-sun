@@ -18,7 +18,7 @@ const BlockItem = ({
   return (
     <React.Fragment>
       <div className="relative">
-        <Image src={img} alt="" className="absolute" />
+        <img src={img} alt="" className="absolute" />
         <div className="ml-12">
           <div
             className="title-responsive text-[24px] leading-8 font-[600] mb-3"

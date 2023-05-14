@@ -46,9 +46,9 @@ export default function Footer() {
       <BlockContent>
         <div className="content-footer w-full flex flex-row items-center justify-between py-8 ">
           <div className="flex flex-row gap-10 footer-left ">
-            <Image
+            <img
               alt="logo"
-              src={logo}
+              src={logo.src}
               onClick={() => {
                 window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
               }}
@@ -73,7 +73,7 @@ export default function Footer() {
             <div className="flex items-center justify-end gap-4">
               {dataBottomIcon.map((item, index) => (
                 <a href={item.onclick} className="glow-on-hover" key={index}>
-                  <Image alt={item.title} src={item.src} />
+                  <img alt={item.title} src={item.src.src} />
                 </a>
               ))}
             </div>

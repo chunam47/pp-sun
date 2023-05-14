@@ -13,7 +13,7 @@ const WelcomeToPepe = () => {
       <BlockContent className="relative pt-[1px]" id="about-us">
         <div className="flex flex-col justify-center items-center relative welcome-to-pepe mt-[300px]">
           <div className="absolute top-[-250px] right-0 z-[-1] opacity-[0.8] img-sun-responsive">
-            <Image alt="" src={img} />
+            <img alt="" src={img.src} />
           </div>
           <div className="flex flex-col justify-center items-center">
             <h2 className="title-app mb-10">Welcome to $PPSUN</h2>
@@ -150,22 +150,28 @@ const WelcomeToPepe = () => {
                     <div className="flex gap-5 items-center justify-center">
                       <div className="min-h-[400px] h-full flex items-center text-[16px] leading-8 p-6 border-[3px] rounded-[20px] text-white border-[#ECFF76] w-[278px]">
                         <div>
-                          <span>Through the</span>{" "}
-                          <span className="text-[#ACF10E]"> $PPSUN</span>{" "}
+                          <span className="text-[#ACF10E]">$PPSUN</span>{" "}
                           <span>
-                            token the community can enjoy moments of relaxation
-                            and entertainment after a stressful workday.
+                            is an AI-driven meme project that aims to promote
+                            truth-seeking and help the community gain free
+                            tickets to Justin&apos;s comedy show.
                           </span>
+                          <br />
+                          <br />
+                          <span></span>
                         </div>
                       </div>
                       <div className="min-h-[400px] h-full flex items-center text-[16px] leading-8 p-6 border-[3px] rounded-[20px] text-white border-[#ECFF76] w-[278px]">
                         <div>
-                          <span>Through the</span>{" "}
-                          <span className="text-[#ACF10E]"> $PPSUN</span>{" "}
+                          <span className="text-[#ACF10E]">$PPSUN</span>{" "}
                           <span>
-                            token the community can enjoy moments of relaxation
-                            and entertainment after a stressful workday.
+                            is an AI-driven meme project that aims to promote
+                            truth-seeking and help the community gain free
+                            tickets to Justin&apos;s comedy show.
                           </span>
+                          <br />
+                          <br />
+                          <span></span>
                         </div>
                       </div>
                     </div>

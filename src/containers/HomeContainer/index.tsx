@@ -9,7 +9,7 @@ const HomeContainer = () => {
       <BlockContent className="pt-[200px] relative ">
         <div className="flex flex-col justify-center items-center relative home-container ">
           <div className="absolute top-[-137px] right-0 z-[-1] opacity-[0.8] img-sun-responsive">
-            <Image alt="" src={img} />
+            <img alt="" src={img.src} />
           </div>
           <h1 className="text-[60px] font-[400] leading-[73px] text-white text-center mb-8 ">
             King Of Fud
