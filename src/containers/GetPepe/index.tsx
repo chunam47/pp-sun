@@ -47,7 +47,10 @@ const GetPepe = () => {
                 />
               </WrapperInput>
             </div>
-            <div className="flex gap-8 justify-evenly w-[90%] mt-14">
+            <div className="flex gap-4 justify-center flex-wrap mt-14">
+              <button className="bg-[#73A095] py-2 px-5 text-white font-medium rounded-xl font-montserrat btn-lauch glow-on-hover">
+                Claim
+              </button>
               <div className="bg-[#73A095] button-connect rounded-xl text-center text-white text-[16px] leading-5 glow-on-hover">
                 <ConnectButton label="Wallet not connected" />
               </div>
