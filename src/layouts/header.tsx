@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @next/next/no-img-element */
 import { MenuOutlined } from "@ant-design/icons";
 import { Drawer, Menu } from "antd";
 import Image from "next/image";
@@ -6,7 +8,7 @@ import logo from "@assets/images/logo.svg";
 import iconSkype from "@assets/images/icon-skype.svg";
 import iconTele from "@assets/images/icon-tele.svg";
 import iconMenu from "@assets/images/icons-menu.svg";
-
+import { useAccount } from "wagmi";
 import iconDiscord from "@assets/images/icon-discord.svg";
 
 import BlockContent from "../components/BlockContent";
@@ -14,11 +16,13 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 export default function Header() {
   const [alert, setAlert] = useState(false);
+
   useEffect(() => {
     setTimeout(() => {
       setAlert(false);
     }, 3000);
   }, [alert]);
+
   const dataMenu = [
     {
       title: "Airdrop",

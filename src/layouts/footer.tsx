@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import logo from "@assets/images/logo.svg";
 import iconSkype from "@assets/images/icon-skype.svg";

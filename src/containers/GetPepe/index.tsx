@@ -1,13 +1,22 @@
-import React from "react";
+/* eslint-disable @next/next/no-img-element */
+import React, { useEffect, useState } from "react";
 import BlockContent from "../../components/BlockContent";
 import Image from "next/image";
 import iconFire from "@assets/images/icon-fire.svg";
 import img from "@assets/images/sun.svg";
 import { styled } from "styled-components";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { useAccount } from "wagmi";
 
 const GetPepe = () => {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
+  const [connect, setConnect] = useState(false);
+  const { isConnected } = useAccount();
+
+  useEffect(() => {
+    setConnect(isConnected);
+  }, [isConnected]);
+
   return (
     <React.Fragment>
       <BlockContent className="relative pt-[1px]" id="aridrop">
@@ -48,9 +57,11 @@ const GetPepe = () => {
               </WrapperInput>
             </div>
             <div className="flex gap-4 justify-center flex-wrap mt-14">
-              <button className="bg-[#73A095] py-2 px-5 text-white font-medium rounded-xl font-montserrat btn-lauch glow-on-hover">
-                Claim
-              </button>
+              {connect && (
+                <button className="bg-[#73A095] py-2 px-5 text-white font-medium rounded-xl font-montserrat btn-lauch glow-on-hover">
+                  Claim
+                </button>
+              )}
               <div className="bg-[#73A095] button-connect rounded-xl text-center text-white text-[16px] leading-5 glow-on-hover">
                 <ConnectButton label="Wallet not connected" />
               </div>
