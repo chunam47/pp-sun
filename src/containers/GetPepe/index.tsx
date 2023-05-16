@@ -6,12 +6,48 @@ import iconFire from "@assets/images/icon-fire.svg";
 import img from "@assets/images/sun.svg";
 import { styled } from "styled-components";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { useAccount } from "wagmi";
+import { useAccount, useContractRead, useContractWrite } from "wagmi";
+
+import abi from "../../constans/abi.json";
 
 const GetPepe = () => {
   const [value, setValue] = useState(0);
   const [connect, setConnect] = useState(false);
-  const { isConnected } = useAccount();
+  const { isConnected, address } = useAccount();
+  const [claimed, setClaimed] = useState<any>(false);
+  const [whitelist, setWhitelist] = useState<any>(false);
+
+  const { data: readClaimed } = useContractRead({
+    address: "0x98D6301dF1E9af50cAeA7d58C00817233db2181F",
+    abi: abi.abi,
+    functionName: "claimed",
+    args: [address],
+  });
+  const { data: readWhitelist } = useContractRead({
+    address: "0x98D6301dF1E9af50cAeA7d58C00817233db2181F",
+    abi: abi.abi,
+    functionName: "whitelist",
+    args: [address],
+  });
+
+  useEffect(() => {
+    setClaimed(readClaimed);
+  }, [readClaimed]);
+  useEffect(() => {
+    setWhitelist(readWhitelist);
+  }, [readWhitelist]);
+
+  console.log("readClaimed", readClaimed);
+
+  const { data, isSuccess, write } = useContractWrite({
+    address: "0x98D6301dF1E9af50cAeA7d58C00817233db2181F",
+    abi: abi.abi,
+    functionName: "addWhiteList",
+    args: [address],
+  });
+
+  console.log("readWhitelist", readWhitelist);
+  console.log("data", data);
 
   useEffect(() => {
     setConnect(isConnected);
@@ -53,14 +89,26 @@ const GetPepe = () => {
                   max="100"
                   step="1"
                   className="progress w-full"
+                  readOnly
                 />
               </WrapperInput>
             </div>
             <div className="flex gap-4 justify-center flex-wrap mt-14">
               {connect && (
-                <button className="bg-[#73A095] py-2 px-5 text-white font-medium rounded-xl font-montserrat btn-lauch glow-on-hover">
-                  Claim
-                </button>
+                <>
+                  {claimed === false && whitelist === true ? (
+                    <button className="bg-[#73A095] py-2 px-5 text-white font-medium rounded-xl font-montserrat btn-lauch glow-on-hover">
+                      Claim
+                    </button>
+                  ) : (
+                    <button
+                      className="bg-[#ccc] py-2 px-5 text-white font-medium rounded-xl font-montserrat btn-lauch"
+                      disabled
+                    >
+                      Claim
+                    </button>
+                  )}
+                </>
               )}
               <div className="bg-[#73A095] button-connect rounded-xl text-center text-white text-[16px] leading-5 glow-on-hover">
                 <ConnectButton label="Wallet not connected" />

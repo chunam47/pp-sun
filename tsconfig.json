@@ -23,7 +23,8 @@
     "**/*.ts",
     "**/*.tsx",
     "src/**/*",
-    "config/**/*"
+    "config/**/*",
+    "type.d.ts"
   ],
   "exclude": ["node_modules"]
 }

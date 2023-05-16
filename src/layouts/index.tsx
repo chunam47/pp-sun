@@ -28,7 +28,6 @@ const Layout: FC<ILayout> = ({
 
   return (
     <>
-      {/* <Header /> */}
       <Head>
         <title>{title}</title>
         <meta

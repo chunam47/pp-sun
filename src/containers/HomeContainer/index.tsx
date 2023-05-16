@@ -6,7 +6,7 @@ import Image from "next/image";
 const HomeContainer = () => {
   return (
     <React.Fragment>
-      <BlockContent className="pt-[200px] relative ">
+      <BlockContent className="pt-[200px] relative">
         <div className="flex flex-col justify-center items-center relative home-container ">
           <div className="absolute top-[-137px] right-0 z-[-1] opacity-[0.8] img-sun-responsive">
             <img alt="" src={img.src} />

@@ -33,6 +33,7 @@
     "@types/react": "^18.0.9",
     "eslint": "^8.15.0",
     "eslint-config-next": "^12.2.6",
+    "json-loader": "^0.5.7",
     "typescript": "^5.0.4"
   }
 }
