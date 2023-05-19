@@ -9,13 +9,16 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount, useContractRead, useContractWrite } from "wagmi";
 
 import abi from "../../constans/abi.json";
+import BigNumber from "bignumber.js";
 
 const GetPepe = () => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState<any>();
   const [connect, setConnect] = useState(false);
   const { isConnected, address } = useAccount();
   const [claimed, setClaimed] = useState<any>(false);
   const [whitelist, setWhitelist] = useState<any>(false);
+  const [totalAir, setTotalAir] = useState<any>(0);
+  const [amountClaim, setAmountClaim] = useState<any>(0);
 
   const { data: readClaimed } = useContractRead({
     address: "0x98D6301dF1E9af50cAeA7d58C00817233db2181F",
@@ -29,30 +32,55 @@ const GetPepe = () => {
     functionName: "whitelist",
     args: [address],
   });
+  const { data: totalAirRead } = useContractRead({
+    address: "0x98D6301dF1E9af50cAeA7d58C00817233db2181F",
+    abi: abi.abi,
+    functionName: "totalAir",
+  });
+  const { data: amountClaimed } = useContractRead({
+    address: "0x98D6301dF1E9af50cAeA7d58C00817233db2181F",
+    abi: abi.abi,
+    functionName: "amountClaimed",
+  });
 
   useEffect(() => {
     setClaimed(readClaimed);
   }, [readClaimed]);
+
+  useEffect(() => {
+    setAmountClaim(amountClaimed);
+  }, [amountClaimed]);
+
   useEffect(() => {
     setWhitelist(readWhitelist);
   }, [readWhitelist]);
 
-  console.log("readClaimed", readClaimed);
+  useEffect(() => {
+    setTotalAir(totalAirRead);
+  }, [totalAirRead]);
 
-  const { data, isSuccess, write } = useContractWrite({
+  const { write, isSuccess } = useContractWrite({
     address: "0x98D6301dF1E9af50cAeA7d58C00817233db2181F",
     abi: abi.abi,
-    functionName: "addWhiteList",
-    args: [address],
+    functionName: "claim",
   });
-
-  console.log("readWhitelist", readWhitelist);
-  console.log("data", data);
 
   useEffect(() => {
     setConnect(isConnected);
-  }, [isConnected]);
+  }, [isConnected, claimed]);
 
+  useEffect(() => {
+    const temp = (Number(amountClaim) / Number(totalAir)) * 100;
+    setValue(BigNumber(temp).toString());
+  }, [amountClaim, totalAir]);
+
+  console.log({ isSuccess });
+
+  useEffect(() => {
+    if (isSuccess) {
+      setClaimed(true);
+    }
+  }, [isSuccess]);
   return (
     <React.Fragment>
       <BlockContent className="relative pt-[1px]" id="aridrop">
@@ -97,7 +125,10 @@ const GetPepe = () => {
               {connect && (
                 <>
                   {claimed === false && whitelist === true ? (
-                    <button className="bg-[#73A095] py-2 px-5 text-white font-medium rounded-xl font-montserrat btn-lauch glow-on-hover">
+                    <button
+                      className="bg-[#73A095] py-2 px-5 text-white font-medium rounded-xl font-montserrat btn-lauch glow-on-hover"
+                      onClick={() => write()}
+                    >
                       Claim
                     </button>
                   ) : (
