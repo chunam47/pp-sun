@@ -27,21 +27,30 @@ const GetPepe = () => {
     functionName: "claimed",
     args: [address],
   });
+
   const { data: readWhitelist } = useContractRead({
     address: "0x98D6301dF1E9af50cAeA7d58C00817233db2181F",
     abi: abi.abi,
     functionName: "whitelist",
     args: [address],
   });
+
   const { data: totalAirRead } = useContractRead({
     address: "0x98D6301dF1E9af50cAeA7d58C00817233db2181F",
     abi: abi.abi,
     functionName: "totalAir",
   });
-  const { data: amountClaimed } = useContractRead({
+
+  const { data: amountClaimed, refetch } = useContractRead({
     address: "0x98D6301dF1E9af50cAeA7d58C00817233db2181F",
     abi: abi.abi,
     functionName: "amountClaimed",
+  });
+
+  useEffect(() => {
+    setTimeout(() => {
+      refetch();
+    }, 3000);
   });
 
   useEffect(() => {
@@ -80,7 +89,7 @@ const GetPepe = () => {
       setClaimed(true);
     }
   }, [isSuccess]);
-  console.log({ totalAir });
+  console.log(amountClaimed);
 
   return (
     <React.Fragment>
@@ -95,10 +104,12 @@ const GetPepe = () => {
             </h2>
             <span className="text-[#73A095] font-[400] text-[18px] leading-[32px] w-[90%] text-center mb-6 content-get-pepe">
               A total of{" "}
-              {numberWithCommas(numberExponentToLarge(Number(totalAir)))} $PPSUN
-              tokens are now available to be claimed by &quot;audience&quot; who
-              are randomly selected through our airdrop campaign. $PPSUN tokens
-              that have not been claimed within
+              {numberWithCommas(
+                BigNumber(totalAir).dividedBy(10e18).toString()
+              )}{" "}
+              $PPSUN tokens are now available to be claimed by
+              &quot;audience&quot; who are randomly selected through our airdrop
+              campaign. $PPSUN tokens that have not been claimed within
             </span>
             <div className="flex bg-[#26423A] items-center rounded-xl px-5 py-2">
               <img alt="" src={iconFire.src} />
@@ -110,7 +121,9 @@ const GetPepe = () => {
               <div className="flex justify-between items-center text-[#73A095] font-[400] leading-5 text-[14px] mt-6 claimed-get-pepe">
                 <span>Claimed</span>
                 <span>
-                  {numberWithCommas(numberExponentToLarge(Number(totalAir)))}
+                  {numberWithCommas(
+                    BigNumber(totalAir).dividedBy(10e18).toString()
+                  )}
                 </span>
               </div>
               <WrapperInput className="w-full" value={value}>
