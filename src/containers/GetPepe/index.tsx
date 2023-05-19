@@ -10,6 +10,7 @@ import { useAccount, useContractRead, useContractWrite } from "wagmi";
 
 import abi from "../../constans/abi.json";
 import BigNumber from "bignumber.js";
+import { numberExponentToLarge, numberWithCommas } from "../../until";
 
 const GetPepe = () => {
   const [value, setValue] = useState<any>();
@@ -74,13 +75,13 @@ const GetPepe = () => {
     setValue(BigNumber(temp).toString());
   }, [amountClaim, totalAir]);
 
-  console.log({ isSuccess });
-
   useEffect(() => {
     if (isSuccess) {
       setClaimed(true);
     }
   }, [isSuccess]);
+  console.log({ totalAir });
+
   return (
     <React.Fragment>
       <BlockContent className="relative pt-[1px]" id="aridrop">
@@ -93,10 +94,11 @@ const GetPepe = () => {
               You get <span className="text-[#ACF10E]">$PPSUN now</span>
             </h2>
             <span className="text-[#73A095] font-[400] text-[18px] leading-[32px] w-[90%] text-center mb-6 content-get-pepe">
-              A total of 200,000,000,000,000 $PPSUN tokens are now available to
-              be claimed by &quot;audience&quot; who are randomly selected
-              through our airdrop campaign. $PPSUN tokens that have not been
-              claimed within
+              A total of{" "}
+              {numberWithCommas(numberExponentToLarge(Number(totalAir)))} $PPSUN
+              tokens are now available to be claimed by &quot;audience&quot; who
+              are randomly selected through our airdrop campaign. $PPSUN tokens
+              that have not been claimed within
             </span>
             <div className="flex bg-[#26423A] items-center rounded-xl px-5 py-2">
               <img alt="" src={iconFire.src} />
@@ -107,7 +109,9 @@ const GetPepe = () => {
             <div className="w-full">
               <div className="flex justify-between items-center text-[#73A095] font-[400] leading-5 text-[14px] mt-6 claimed-get-pepe">
                 <span>Claimed</span>
-                <span>200,000,000,000,000</span>
+                <span>
+                  {numberWithCommas(numberExponentToLarge(Number(totalAir)))}
+                </span>
               </div>
               <WrapperInput className="w-full" value={value}>
                 <input
